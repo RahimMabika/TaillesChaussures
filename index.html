@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailles des chaussures</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tailles des chaussures</h1>
+
+      <div class="form-section">
+        <label for="sexe">Chaussures pour :</label>
+        <select id="sexe" name="sexe">
+          <option value="">Sélectionnez</option>
+          <option value="homme">Homme</option>
+          <option value="femme">Femme</option>
+          <option value="enfant">Enfant</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label for="type-taille">Choisissez votre taille :</label>
+        <select id="type-taille" name="type-taille">
+          <option value="">Sélectionnez le type de taille</option>
+          <option value="eur">Taille EUR</option>
+          <option value="uk">Taille UK</option>
+          <option value="us">Taille US</option>
+          <option value="mondopoint">Taille Mondopoint</option>
+          <option value="cm">Long. du pied (cm)</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label for="tailles">Entrez votre taille :</label>
+        <input type="number" id="tailles" placeholder="Entrez la taille" onkeydown="detecterEntree(event)" />
+      </div>
+
+      <!-- Barre de défilement -->
+      <div class="form-section">
+        <label for="slider">Taille :</label>
+        <input type="range" id="slider" min="1" max="57" step="0.5" value="1" />
+        <span id="slider-value">1</span>
+      </div>
+
+      <button id="btn-calculer">Calculer</button>
+
+      <div id="resultat" style="display: none">
+        <h2>Résultats :</h2>
+        <p id="resultat-eur"></p>
+        <p id="resultat-uk"></p>
+        <p id="resultat-us"></p>
+        <p id="resultat-cm"></p>
+        <p id="resultat-mondopoint"></p>
+      </div>
+      <a href="https://www.wetall.fr/" target="_blank">
+        <img src="images/Wetall-vectorisé-wetall.jpg" alt="logo" />
+      </a>
+    </div>
+  </body>
+</html>
