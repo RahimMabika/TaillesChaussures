@@ -6,6 +6,11 @@ body {
   text-align: center;
   color: #00285b;
 }
+a {
+  text-decoration: underline;
+  outline: none;
+  box-shadow: none;
+}
 
 .container {
   max-width: 600px;
@@ -26,6 +31,7 @@ img {
   margin-top: 20px;
   margin-right: 600px;
 }
+
 h1 {
   font-size: 24px;
   color: #00285b;
@@ -63,7 +69,7 @@ select {
   color: #00285b;
 }
 
-button {
+.default-button {
   padding: 10px 20px;
   background-color: #eccf5b;
   color: #fff;
@@ -74,9 +80,30 @@ button {
   transition: 1s;
 }
 
-button:hover {
+.default-button:hover {
   background-color: #00285b;
   transition: 1s;
+}
+
+.styled-button {
+  color: #00285b;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-top: -20px;
+  text-decoration: underline;
+  outline: none;
+  box-shadow: none;
+  background: none;
+}
+
+.styled-button:hover,
+.styled-button:focus {
+  text-decoration: none;
+  outline: none;
 }
 
 .result-section {
