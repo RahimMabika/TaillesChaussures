@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const taillesInput = document.getElementById("tailles");
   const typeTailleSelect = document.getElementById("type-taille");
 
-  // Définir "eur" comme taille par défaut
+  //  "eur"  taille par défaut
   typeTailleSelect.value = "eur";
 
   // Fonction pour ajuster le slider en fonction du type de taille
@@ -172,4 +172,18 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", convertirTaille);
 
   ajusterSlider();
+});
+// Code iframe à copier
+const iframeCode = `<iframe src="https://rahimmabika.github.io/TaillesChaussures/" title="Convertisseur"></iframe>`;
+
+// Ajoute un événement au bouton pour copier le code
+document.getElementById("copy-btn").addEventListener("click", function () {
+  navigator.clipboard
+    .writeText(iframeCode)
+    .then(() => {
+      alert("Le code iframe a été copié dans le presse-papier !");
+    })
+    .catch(() => {
+      alert("Erreur lors de la copie du code.");
+    });
 });
