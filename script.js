@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "mondopoint":
         slider.min = 50;
-        slider.max = 370;
+        slider.max = 500;
         slider.step = 5;
         break;
       case "cm":
